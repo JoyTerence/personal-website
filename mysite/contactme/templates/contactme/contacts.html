@@ -1,0 +1,32 @@
+{% extends 'personal/header.html' %}
+{% block content %}
+<div class="formfield" style="height:95%; display:flex; justify-content:center">
+  <div class="subformfield" style="align-self:center">
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.label == "Contact name" %}
+              <label for="{{field.label}}" class="col-sm-2 col-form-label" style="background-color:#3f58b3; padding-top:5px; padding-bottom:3px; box-shadow:5px 5px 5px rgba(0,0,0,0.4)">What you are known as : </label>
+            {% endif %}
+            {% if field.label == "Contact email" %}
+              <label for="{{field.label}}" class="col-sm-2 col-form-label" style="background-color:#3f58b3; padding-top:5px; padding-bottom:3px; box-shadow:5px 5px 5px rgba(0,0,0,0.4)">You secret email :</label>
+            {% endif %}
+            {% if field.label == "Content" %}
+              <label for="{{field.label}}" class="col-sm-2 col-form-label" style="background-color:#3f58b3; padding-top:5px; padding-bottom:3px; box-shadow:5px 5px 5px rgba(0,0,0,0.4)">What you want to say :</label>
+            {% endif %}
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="{{field.help_text}}" style="box-shadow:5px 5px 5px rgba(0,0,0,0.4)">
+            </div>
+        {% endfor %}
+        <center>
+          <button type="submit" style="margin-top:2%; width:10%; background-color:#5bc0de; box-shadow:5px 5px 5px rgba(0,0,0,0.4)"> Send:<span class="glyphicon glyphicon-send"></span></button>
+        </center>
+    </form>
+  </div>
+</div>
+<footer>
+  <center>
+    <p> You can reach me @ Ph no : <b>+91 87928063535</b> or email me : <b>joyterencebarnes@gmail.com</b> </p>
+  </center>
+</footer>
+{% endblock %}

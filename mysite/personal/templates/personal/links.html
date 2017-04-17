@@ -1,0 +1,48 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="links" style="height:100%; display:flex; justify-content:center">
+    <table align="center" class="table table-hover" style="width:50%; align-self:center">
+    <thead align="center">
+      <tr>
+        <td><b><em>Find me on:<em><b></td>
+      </tr>
+    </thead>
+    <tbody align="center">
+      <tr>
+        <td scope="row">
+          <a href="https://github.com/JoyTerence" target="_blank" style="text-decoration:none">
+            <img src="{% static 'personal/img/github.png' %}" style="height:30%">
+          </a>
+              &nbsp&nbsp
+          <a href="https://www.linkedin.com/in/joyterencebarnes/" target="_blank" >
+            <b>Github</b>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td scope="row">
+          <a href="https://www.linkedin.com/in/joyterencebarnes/" target="_blank" style="text-decoration:none">
+            <img src="{% static 'personal/img/linkedin.png' %}" style="height:100%">
+          </a>
+          &nbsp
+          <a href="https://www.linkedin.com/in/joyterencebarnes/" target="_blank">
+            <b>LinkedIn</b>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td scope="row">
+          <a href="https://www.facebook.com/joy.terence.9"t arget="_blank" style="text-decoration:none">
+            <img src="{% static 'personal/img/fb.png' %}" style="height:100%">
+          </a>
+            &nbsp
+          <a href="https://www.linkedin.com/in/joyterencebarnes/" target="_blank">
+            <b>Facebook</b>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </table>
+{% endblock %}

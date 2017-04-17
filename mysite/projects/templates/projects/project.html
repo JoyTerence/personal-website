@@ -1,0 +1,23 @@
+{% extends "personal/header.html" %}
+{% load mathfilters %}
+{% block content %}
+    <table class="table table-reponsive" style="margin-top:1%;border:none">
+      <tbody>
+        {% for repo in all_projects %}
+          {% if repo.id|mod:3 == 1 %}
+          <tr>
+          {% endif %}
+          <td class="table-active" style="max-width:100%;height:100%;">
+            <div class="card-deck" style="background-color:#5bc0de; width: 95%; margin:1%; height:100%; padding:1%; box-shadow: 0 0 4px 4px rgba(0, 0, 0, .4)">
+              <div class="card-block" style="max-width:100%; height:100%;position:relative; padding-bottom:5%">
+                <h4 class="card-title"><b>{{repo.title}}</b></h4>
+                <p class="card-text"; style="position:relative">{{repo.description}}</p>
+                <br>
+                  <a href="{{repo.link}}" class="btn btn-primary" target="_blank"style="position:absolute; bottom:0; box-shadow: 0 0 4px 4px rgba(0, 0, 0, .2)">Github link</a>
+              </div>
+            </div>
+          </td>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

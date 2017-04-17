@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%; width:100%">
+
+<head>
+  <title>Personal website</title>
+  <meta charset="utf-8"/>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+  <style type="text/css">
+    html,
+    body {
+      height:100%
+    }
+  </style>
+</head>
+
+<body class="body" style="background-color:#6cd8cd">
+  <div class="container-fluid" style="height:100%; width:100%">
+    <div class="row" style="height:100%">
+      <div class="col-sm-3 col-md-2 sidebar" style="background-color:#5bc0de; height:100%; padding:0px; box-shadow: 0 0 10px 10px rgba(0, 0, 0, .3);">
+        <ul class="nav-header" style="margin-top: 40%">
+          <img class="img-circle" src="{% static 'personal/img/profile.png' %}" style="height:80%; width:80%; box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.6)"></a>
+        </ul>
+        <div class="navbar-body" style="margin-top: 40%">
+          <ul class="nav sidebar-nav" id="sidebar-wrapper">
+            <li ><a href="/home/" class="btn btn-info"><span style="font-size:200%;" class="glyphicon glyphicon-home"></span></a></li>
+            <li ><a href="/projects/" class="btn btn-info"><span style="font-size:200%;" class="glyphicon glyphicon-folder-open"></span></a></li>
+            <li ><a href="/links/" class="btn btn-info"><span style="font-size:200%;" class="glyphicon glyphicon-link"></span></a></li>
+            <li ><a href="/contacts/" class="btn btn-info"><span style="font-size:200%;" class="glyphicon glyphicon-phone"></span></a></li>
+            <li ><a href={% static '/personal/resume/joyterencebarnes.pdf' %} target="_blank" class="btn btn-info"><span style="font-size:200%;"   class="glyphicon glyphicon-download-alt"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10" style="height:100%;">
+          {% block content%}
+          {% endblock %}
+      </div>
+    </div>
+  <div>
+<body>
